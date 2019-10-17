@@ -1,4 +1,6 @@
 package domain;
 
-public class Observer {
+public interface Observer {
+
+    void update(Player player, Score score);
 }

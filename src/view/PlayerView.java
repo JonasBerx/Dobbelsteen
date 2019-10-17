@@ -1,5 +1,6 @@
 package view;
 
+import domain.Dice;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -48,7 +49,11 @@ public class PlayerView  {
 	class ThrowDicesHandler implements EventHandler<ActionEvent> {
         @Override
         public void handle(ActionEvent event) {
-            
+			Dice dice = new Dice();
+			System.out.println(dice.throwDice());
+			isAanBeurt(false);
+			messageLabel.setText("Beurt is geweest");
+
         }
     }
 }

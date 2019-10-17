@@ -1,4 +1,4 @@
 package domain;
 
-public class Observable {
+public interface Observable {
 }
