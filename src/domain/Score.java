@@ -18,6 +18,7 @@ public class Score implements Observer {
 
     @Override
     public void update(Player player, Score score) {
+        player.setScore(score);
         addScore(score.point);
     }
 }

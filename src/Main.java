@@ -11,8 +11,6 @@ public class Main extends Application {
 		PlayerView pv2 = new PlayerView(2);
 		PlayerView pv1 = new PlayerView(1);		
 		pv1.isAanBeurt(true);
-		pv2.isAanBeurt(false);
-		pv3.isAanBeurt(false);
 	}
 	
 	public static void main(String[] args) {
