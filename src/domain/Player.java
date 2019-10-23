@@ -3,22 +3,16 @@ package domain;
 public class Player {
     private String name;
     private Score score;
-    private Dice dice;
 
 
     public Player() {
         this.name = "Unknown Player";
         this.score = new Score();
-        this.dice = new Dice();
     }
 
     public Player(String name) {
-        if (name.isEmpty()) {
-            throw new IllegalArgumentException("Name is empty");
-        }
-        this.name = name;
-        this.score = new Score();
-        this.dice = new Dice();
+        setName(name);
+        setScore(new Score());
     }
 
     public String getName() {
@@ -26,7 +20,11 @@ public class Player {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.isEmpty() || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name is empty");
+        } else {
+            this.name = name;
+        }
     }
 
     public Score getScore() {
@@ -34,14 +32,10 @@ public class Player {
     }
 
     public void setScore(Score score) {
-        this.score = score;
-    }
-
-    public Dice getDice() {
-        return dice;
-    }
-
-    public void setDice(Dice dice) {
-        this.dice = dice;
+        if (score == null) {
+            throw new IllegalArgumentException("Oei je hebt een lege score toegevoegd");
+        } else {
+            this.score = score;
+        }
     }
 }
