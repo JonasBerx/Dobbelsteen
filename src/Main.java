@@ -3,14 +3,18 @@ import javafx.stage.Stage;
 import view.PlayerView;
 import view.ScoreView;
 
+import java.util.ArrayList;
+
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		new ScoreView();
-		PlayerView pv3 = new PlayerView(3);
-		PlayerView pv2 = new PlayerView(2);
-		PlayerView pv1 = new PlayerView(1);		
+		PlayerView pv1 = new PlayerView("Dietr", 1);
+		PlayerView pv2 = new PlayerView("Pieter", 2);
+		PlayerView pv3 = new PlayerView("Jonas", 3);
+
 		pv1.isAanBeurt(true);
+
 	}
 	
 	public static void main(String[] args) {

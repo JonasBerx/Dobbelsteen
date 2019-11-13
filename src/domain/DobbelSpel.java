@@ -5,6 +5,7 @@ import java.util.List;
 
 public class DobbelSpel implements Observable {
     List<Observer> observers = new ArrayList<>();
+
     @Override
     public void addObserver(Observer observer) {
         if (observer != null) {

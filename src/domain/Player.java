@@ -3,6 +3,7 @@ package domain;
 public class Player {
     private String name;
     private Score score;
+    private boolean isAanDeBeurt;
 
 
     public Player() {
@@ -37,5 +38,13 @@ public class Player {
         } else {
             this.score = score;
         }
+    }
+
+    public void setAanDeBeurt(boolean aanDeBeurt) {
+        isAanDeBeurt = aanDeBeurt;
+    }
+
+    public boolean isAanDeBeurt() {
+        return isAanDeBeurt;
     }
 }
