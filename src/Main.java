@@ -10,6 +10,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		new ScoreView();
+		DobbelSpel d = new DobbelSpel();
 		PlayerView pv1 = new PlayerView("Dietr", 1);
 		PlayerView pv2 = new PlayerView("Pieter", 2);
 		PlayerView pv3 = new PlayerView("Jonas", 3);
