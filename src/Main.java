@@ -1,3 +1,4 @@
+import domain.DobbelSpel;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import view.PlayerView;
@@ -16,7 +17,7 @@ public class Main extends Application {
 		pv1.isAanBeurt(true);
 
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

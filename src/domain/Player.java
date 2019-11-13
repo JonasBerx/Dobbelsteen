@@ -41,6 +41,7 @@ public class Player implements Observable {
             throw new IllegalArgumentException("Oei je hebt een lege score toegevoegd");
         } else {
             this.score = score;
+            notifyObserver(score, this);
         }
     }
 
