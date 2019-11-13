@@ -1,8 +1,12 @@
 package domain;
 
-public class Player {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Player implements Observable {
     private String name;
     private Score score;
+    List<Observer> observers = new ArrayList<>();
     private boolean isAanDeBeurt;
 
 
@@ -46,5 +50,20 @@ public class Player {
 
     public boolean isAanDeBeurt() {
         return isAanDeBeurt;
+    }
+
+    @Override
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObserver(Score score, Player player) {
+        observers.forEach(o -> o.update(player, score));
     }
 }
