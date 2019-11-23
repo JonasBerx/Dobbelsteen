@@ -1,6 +1,5 @@
 package domain;
 
 public interface Observer {
-
-    void update(Player player, Score score);
+    void update(String s);
 }
