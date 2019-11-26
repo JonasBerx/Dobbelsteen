@@ -19,7 +19,7 @@ public class PlayerView implements Observer {
 	private Game game;
 
 	private int playerid;
-
+		////////
 
 	public PlayerView(int playerid, Game game){
 		this.playerid = playerid;
